@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cub3d.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jaehwkim <jaehwkim@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/24 14:38:55 by jaehwkim          #+#    #+#             */
+/*   Updated: 2022/10/24 14:38:56 by jaehwkim         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CUB3D_H
 # define CUB3D_H
 
@@ -46,7 +58,7 @@ void	fill_map_array(t_game *game, int fd, char *line);
 void	get_map_array(t_game *game, int fd);
 
 /*  read_map_utils.c    */
-int		is_space(char	c);
+int		is_space(char c);
 int		is_map(char	*line);
 int		is_end_line(char *line);
 
