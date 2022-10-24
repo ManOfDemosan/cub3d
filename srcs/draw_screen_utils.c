@@ -6,7 +6,7 @@
 /*   By: jaehwkim <jaehwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 14:26:29 by jaehwkim          #+#    #+#             */
-/*   Updated: 2022/10/24 14:27:15 by jaehwkim         ###   ########.fr       */
+/*   Updated: 2022/10/24 14:36:55 by jaehwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,12 +74,12 @@ void	init_screen_image(t_game *game)
 	index = 0;
 	while (index < WIN_H * WIN_W / 2)
 	{
-		screen->img_data[index] = game->cube_info->C;
+		screen->img_data[index] = game->cube_info->c;
 		++index;
 	}
 	while (index < WIN_H * WIN_W)
 	{
-		screen->img_data[index] = game->cube_info->F;
+		screen->img_data[index] = game->cube_info->f;
 		++index;
 	}
 }

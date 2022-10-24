@@ -40,7 +40,6 @@ enum	e_element
 	E_ROAD,
 	E_WALL,
 	E_VOID
-	// E_PLAYER,
 };
 
 enum	e_cube_dir // for textnum
@@ -53,12 +52,12 @@ enum	e_cube_dir // for textnum
 
 struct	s_cube_info
 {
-	char		*NO;
-	char		*SO;
-	char		*WE;
-	char		*EA;
-	long long	F;
-	long long	C;
+	char		*no;
+	char		*so;
+	char		*we;
+	char		*ea;
+	long long	f;
+	long long	c;
 };
 
 struct	s_player

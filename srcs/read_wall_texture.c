@@ -6,7 +6,7 @@
 /*   By: jaehwkim <jaehwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 14:26:54 by jaehwkim          #+#    #+#             */
-/*   Updated: 2022/10/24 14:26:55 by jaehwkim         ###   ########.fr       */
+/*   Updated: 2022/10/24 14:38:14 by jaehwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ static void	update_value(char **info, char *value)
 static int	compare_and_save(char **splited, t_cube_info *cube_info)
 {
 	if (!ft_strncmp(splited[0], "NO", 3))
-		update_value(&cube_info->NO, splited[1]);
+		update_value(&cube_info->no, splited[1]);
 	else if (!ft_strncmp(splited[0], "SO", 3))
-		update_value(&cube_info->SO, splited[1]);
+		update_value(&cube_info->so, splited[1]);
 	else if (!ft_strncmp(splited[0], "WE", 3))
-		update_value(&cube_info->WE, splited[1]);
+		update_value(&cube_info->we, splited[1]);
 	else if (!ft_strncmp(splited[0], "EA", 3))
-		update_value(&cube_info->EA, splited[1]);
+		update_value(&cube_info->ea, splited[1]);
 	else
 	{
 		free(splited[0]);
@@ -69,9 +69,9 @@ static int	fc_compare_and_save(char **splited, t_cube_info *cube_info)
 		++i;
 	}
 	if (!ft_strncmp(splited[0], "F", 2))
-		fc_update_value(&cube_info->F, result);
+		fc_update_value(&cube_info->f, result);
 	else if (!ft_strncmp(splited[0], "C", 2))
-		fc_update_value(&cube_info->C, result);
+		fc_update_value(&cube_info->c, result);
 	i = 0;
 	while (i < 4)
 		free(splited[i++]);

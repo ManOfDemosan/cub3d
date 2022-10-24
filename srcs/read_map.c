@@ -6,7 +6,7 @@
 /*   By: jaehwkim <jaehwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 14:26:52 by jaehwkim          #+#    #+#             */
-/*   Updated: 2022/10/24 14:26:56 by jaehwkim         ###   ########.fr       */
+/*   Updated: 2022/10/24 14:37:52 by jaehwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,17 @@ int	count_in_cube_info(t_cube_info *cube_info)
 	int	count;
 
 	count = 0;
-	if (cube_info->NO)
+	if (cube_info->no)
 		++count;
-	if (cube_info->SO)
+	if (cube_info->so)
 		++count;
-	if (cube_info->WE)
+	if (cube_info->we)
 		++count;
-	if (cube_info->EA)
+	if (cube_info->ea)
 		++count;
-	if (cube_info->F != -1)
+	if (cube_info->f != -1)
 		++count;
-	if (cube_info->C != -1)
+	if (cube_info->c != -1)
 		++count;
 	return (count);
 }

@@ -6,7 +6,7 @@
 /*   By: jaehwkim <jaehwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 14:26:39 by jaehwkim          #+#    #+#             */
-/*   Updated: 2022/10/24 14:27:02 by jaehwkim         ###   ########.fr       */
+/*   Updated: 2022/10/24 14:37:32 by jaehwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,10 +68,10 @@ void	load_texture(t_game	*game)
 		game->wall_texture[x] = calloc(TEX_SIZE * TEX_SIZE, sizeof(int));
 		++x;
 	}
-	load_xpm(game, game->wall_texture[0], game->cube_info->NO, &img);
-	load_xpm(game, game->wall_texture[1], game->cube_info->SO, &img);
-	load_xpm(game, game->wall_texture[2], game->cube_info->WE, &img);
-	load_xpm(game, game->wall_texture[3], game->cube_info->EA, &img);
+	load_xpm(game, game->wall_texture[0], game->cube_info->no, &img);
+	load_xpm(game, game->wall_texture[1], game->cube_info->so, &img);
+	load_xpm(game, game->wall_texture[2], game->cube_info->we, &img);
+	load_xpm(game, game->wall_texture[3], game->cube_info->ea, &img);
 }
 
 void	init_mlx(t_game *game)
@@ -96,8 +96,8 @@ void	init_mlx(t_game *game)
 void	init_all(t_game	*game)
 {
 	game->cube_info = ft_calloc(1, sizeof(t_cube_info));
-	game->cube_info->F = -1;
-	game->cube_info->C = -1;
+	game->cube_info->f = -1;
+	game->cube_info->c = -1;
 	game->player = ft_calloc(1, sizeof(t_player));
 	game->parsing_info = ft_calloc(1, sizeof(t_parsing_info));
 }
