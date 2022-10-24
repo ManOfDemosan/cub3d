@@ -50,41 +50,47 @@ static void	check_middle_line(char *splited, char *temp, \
 	++(passing_info->height);
 }
 
-static void	check_all_line(char *splited, char *temp, \
-							t_parsing_info *passing_info, int fd)
+static void check_all_line(char *splited, char *temp, \
+                            t_parsing_info *passing_info, int fd)
 {
-	char	*line;
-
-	while (splited)
-	{
-		check_middle_line(splited, temp, passing_info);
-		free(temp);
-		temp = splited;
-		splited = NULL;
-		line = get_next_line(fd);
-		if (!line || line[0] == '\n')
-		{
-			is_end_line(temp);
-			free(temp);
-			break ;
-		}
-		splited = remove_newline(line, "\n");
-		free(line);
-	}
+    char    *line;
+    while (splited)
+    {
+        check_middle_line(splited, temp, passing_info);
+        free(temp);
+        temp = splited;
+        splited = NULL;
+        line = get_next_line(fd);
+        if (!line)
+        {
+            is_end_line(temp);
+            free(temp);
+            break ;
+        }
+        if (line[0] == '\n')
+        {
+            is_end_line(temp);
+        }
+        splited = remove_newline(line, "\n");
+        free(line);
+    }
 }
-
-void	check_valid_map(char *line, t_parsing_info *passing_info, int fd)
+void    check_valid_map(char *line, t_parsing_info *passing_info, int fd)
 {
-	char	*temp;
-	char	*splited;
-
-	if (!line)
-		print_error_and_exit("wrong information\n");
-	passing_info->width = is_end_line(line) - 1;
-	++(passing_info->height);
-	temp = line;
-	line = get_next_line(fd);
-	splited = remove_newline(line, "\n");
-	free(line);
-	check_all_line(splited, temp, passing_info, fd);
+    char    *temp;
+    char    *splited;
+    if (!line)
+        print_error_and_exit("wrong information\n");
+    passing_info->width = is_end_line(line) - 1;
+    ++(passing_info->height);
+    temp = line;
+    line = get_next_line(fd);
+    splited = remove_newline(line, "\n");
+    if (splited == NULL)
+    {
+        free(splited);
+        splited = ft_strdup(" ");
+    }
+    free(line);
+    check_all_line(splited, temp, passing_info, fd);
 }

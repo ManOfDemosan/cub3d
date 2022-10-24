@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hogkim <hogkim@student.42seoul.kr>         +#+  +:+       +#+        */
+/*   By: jaehwkim <jaehwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/05 20:25:11 by hogkim            #+#    #+#             */
-/*   Updated: 2022/07/11 18:34:48 by hogkim           ###   ########.fr       */
+/*   Updated: 2022/10/24 14:07:59 by jaehwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@
 
 # define BUFFER_SIZE 50000
 
-char	*ft_strdup(const char *s1);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 int		ft_no_newline(char *buffer);
 char	*ft_strjoin_gnl(char *s1, char *s2);
