@@ -6,7 +6,7 @@
 /*   By: jaehwkim <jaehwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 14:26:54 by jaehwkim          #+#    #+#             */
-/*   Updated: 2022/10/24 14:38:14 by jaehwkim         ###   ########.fr       */
+/*   Updated: 2022/10/25 10:53:45 by jaehwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ static int	fc_compare_and_save(char **splited, t_cube_info *cube_info)
 	{
 		value = ft_atoi(splited[i]);
 		if (value > 255)
-			print_error_and_exit("wrong information!\n");
+			print_error_and_exit("wrong information\n");
 		result += value;
 		if (i != 3)
 			result = result << 8;

@@ -6,7 +6,7 @@
 /*   By: jaehwkim <jaehwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 14:26:18 by jaehwkim          #+#    #+#             */
-/*   Updated: 2022/10/24 14:27:38 by jaehwkim         ###   ########.fr       */
+/*   Updated: 2022/10/25 11:01:12 by jaehwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,8 @@ void	check_valid_map(char *line, t_parsing_info *passing_info, int fd)
 	++(passing_info->height);
 	temp = line;
 	line = get_next_line(fd);
+	if (!line)
+		print_error_and_exit("wrong information\n");
 	splited = remove_newline(line, "\n");
 	if (splited == NULL)
 	{

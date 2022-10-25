@@ -6,7 +6,7 @@
 /*   By: jaehwkim <jaehwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 14:26:39 by jaehwkim          #+#    #+#             */
-/*   Updated: 2022/10/24 14:37:32 by jaehwkim         ###   ########.fr       */
+/*   Updated: 2022/10/25 10:53:41 by jaehwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	load_xpm(t_game *game, int *texture, char *path, t_img *img)
 	img->img_ptr = mlx_xpm_file_to_image(game->mlx->mlx_ptr, path, \
 						&img->img_width, &img->img_height);
 	if (img->img_ptr == NULL)
-		print_error_and_exit("wrong information!\n");
+		print_error_and_exit("wrong information\n");
 	img->img_data = (int *)mlx_get_data_addr(img->img_ptr, &img->bpp, \
 							&img->size_l, &img->endian);
 	y = 0;

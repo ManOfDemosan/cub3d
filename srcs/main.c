@@ -6,12 +6,11 @@
 /*   By: jaehwkim <jaehwkim@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 14:26:41 by jaehwkim          #+#    #+#             */
-/*   Updated: 2022/10/24 14:27:01 by jaehwkim         ###   ########.fr       */
+/*   Updated: 2022/10/25 11:10:57 by jaehwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/cub3d.h"
-#include <stdio.h>
 #include "../mlx/mlx.h"
 
 int	main(int ac, char **av)
