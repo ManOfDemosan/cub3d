@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_utills.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaehwkim <jaehwkim@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jaehwkim <jaehwkim@student.42seoul.kr>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 14:26:23 by jaehwkim          #+#    #+#             */
-/*   Updated: 2022/10/24 14:27:29 by jaehwkim         ###   ########.fr       */
+/*   Updated: 2022/10/25 11:16:35 by jaehwkim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 char	*remove_newline(char *line, char *set)
 {
 	char	**splited;
+	char	*tmp;
 
 	splited = ft_split(line, set);
 	if (splited[0] == NULL)
@@ -23,7 +24,8 @@ char	*remove_newline(char *line, char *set)
 		free(splited);
 		return (ft_strdup(" "));
 	}
+	tmp = splited[0];
 	free(splited[1]);
 	free(splited);
-	return (splited[0]);
+	return (tmp);
 }
